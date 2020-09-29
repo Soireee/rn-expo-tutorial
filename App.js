@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import logo from './assets/splash.png';
+import BodyText from './src/elements/BodyText';
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
         style={{ backgroundColor: 'blue' }}>
         <Text style={{ fontSize: 20, color: '#fff' }}>Pick a photo</Text>
       </TouchableOpacity>
+      {/* BodyTextにHiを送ると、そこにstyleが修正される。コレはBodyText,js側でthis.props.childrenを指定しているから */}
+      <BodyText>Hi</BodyText>
     </View>
   );
 }
